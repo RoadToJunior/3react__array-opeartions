@@ -1,9 +1,7 @@
 import React from "react";
 import "./App.css";
 
-const Item = (props) => {
-  return <li>{`owoc ${props.content}`}</li>;
-};
+const Item = (props) => <li>{`owoc ${props.content}`}</li>;
 
 class ListItems extends React.Component {
   state = {
@@ -13,7 +11,7 @@ class ListItems extends React.Component {
     return (
       <ul>
         {this.state.items.map((item) => (
-          <Item content={item} />
+          <Item key={item} content={item} />
         ))}
       </ul>
     );
