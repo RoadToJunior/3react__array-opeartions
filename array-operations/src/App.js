@@ -9,7 +9,7 @@ class ListItems extends React.Component {
     return (
       <ul>
         {this.state.items.map((item) => (
-          <li key={item}>{item}</li>
+          <li key={item}>{`owoc ${item}`}</li>
         ))}
       </ul>
     );
