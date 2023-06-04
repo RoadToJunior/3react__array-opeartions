@@ -8,13 +8,11 @@ class ListItems extends React.Component {
     items: ["jabłko", "śliwka", "gruszka"],
   };
   render() {
-    return (
-      <ul>
-        {this.state.items.map((item) => (
-          <Item key={item} content={item} />
-        ))}
-      </ul>
-    );
+    const Items = this.state.items.map((item) => (
+      <Item key={item} content={item} />
+    ));
+
+    return <ul>{Items}</ul>;
   }
 }
 export default ListItems;
