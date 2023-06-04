@@ -8,9 +8,11 @@ class ListItems extends React.Component {
   render() {
     return (
       <ul>
-        <li></li>
+        {this.state.items.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
       </ul>
     );
   }
 }
-export default App;
+export default ListItems;
