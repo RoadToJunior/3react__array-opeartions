@@ -31,7 +31,9 @@ const Item = ({ user }) => (
   <div className="userInfo">
     <h1>{user.name}</h1>
     <p>Informacje o użytkowniku</p>
-    <h2>Wiek użytkownika: {user.age}</h2>
+    <h2>
+      Wiek użytkownika: <strong>{user.age}</strong>
+    </h2>
     <p>Płeć użytkownika: {user.sex}</p>
   </div>
 );
