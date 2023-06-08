@@ -39,10 +39,12 @@ const Item = ({ user }) => (
 );
 class ListItems extends React.Component {
   render() {
-    const users = this.props.data.users;
-    const Items = users.map((user) => <Item key={user.id} user={user} />);
-
-    return <ul>{Items}</ul>;
+    <div>
+      <button>Wszyscy</button>
+      <button>Kobiety</button>
+      <button>Mężczyźni</button>
+      {this.userList()}
+    </div>;
   }
 }
 
