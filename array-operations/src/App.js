@@ -43,6 +43,13 @@ class ListItems extends React.Component {
   };
   userList = () => {
     let users = this.props.data.users;
+    switch (this.state.select) {
+      case "all":
+        return users.map((user) => <Item user={user} key={user.id} />);
+      case "female":
+        users = users.filter((user) => user.sex === "female");
+        return users.map((user) => <Item user={user} key={user.id} />);
+    }
   };
 
   handleUsersFilter(option) {
